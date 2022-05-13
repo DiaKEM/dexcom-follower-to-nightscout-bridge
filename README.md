@@ -27,6 +27,20 @@ TBD
 
 TBD
 
+## Developement
+
+Just checkout this repository and install the dependencies:
+
+```
+$ npm i
+```
+
+Now you can do your changes. To test them you have to rebuild the sources and run the corresponding command;
+
+```
+$ npm start -- sync -u FOLOWER_USERNAME -p ...
+```
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. 
