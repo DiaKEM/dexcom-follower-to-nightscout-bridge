@@ -1,7 +1,7 @@
 {
   "name": "@diakem/dexcom-follower-to-nightscout-bridge",
   "version": "0.0.0",
-  "description": "Real-time data bridge between dexcom-share and nightscout",
+  "description": "Real-time data bridge between dexcom's sharing service and nightscout",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
