@@ -19,15 +19,45 @@ only ask for new data if it is expected and this will be done in a very aggresiv
 
 That's all to my general motivation to start writing this bridge application.
 
+**But**
+
+I just realized that [Chris Pitchford](https://github.com/cpitchford) just implemented this for
+nightscout in this [PR](https://github.com/nightscout/cgm-remote-monitor/pull/7231).
+
 ## Installation
 
-TBD
+```
+$ git clone git@github.com:DiaKEM/dexcom-follower-to-nightscout-bridge.git
+$ npm install
+$ npm run build
+```
 
 ## Configuration
 
-TBD
+The bridge needs the following information:
 
-## Developement
+* Dexcom follower username
+* Dexcom follower password
+* Nightscout instance url
+* Nightscout api secret
+
+The bridge allows you to provide these information over command options or environment variables:
+
+** Command options **
+```
+$  ./cli sync \ -s EU \
+-u DexcomUsername \
+-p DexcomPassword \
+-i http://my-nightscout-instance \
+-a NightscoutApiSecret
+```
+
+** Environment variables **
+
+```
+DEXCOM_FOLLOWER_USERNAME=DexomUsername DEXCOM_FOLLOWER_PASSWORD=DexcomPassword DEXCOM_FOLLOWER_SERVER=EU NIGHTSCOUT_INSTANCE_URL=https://my-nightscout-instance NIGHTSCOUT_API_SECRET=NightscoutApiSecret ./cli sync  
+```
+## Development
 
 Just checkout this repository and install the dependencies:
 
@@ -38,7 +68,12 @@ $ npm i
 Now you can do your changes. To test them you have to rebuild the sources and run the corresponding command;
 
 ```
-$ npm start -- sync -u FOLOWER_USERNAME -p ...
+$ npm start -- sync \
+-s EU \
+-u DexcomUsername\
+-p DexcomPassword \
+-i https://your-nightscout-instance \
+-a NightscoutApiSecret
 ```
 
 ## Contributing
