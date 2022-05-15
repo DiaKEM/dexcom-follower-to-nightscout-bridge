@@ -43,7 +43,7 @@ The bridge needs the following information:
 
 The bridge allows you to provide these information over command options or environment variables:
 
-** Command options **
+**Command options**
 ```
 $  ./cli sync \ -s EU \
 -u DexcomUsername \
@@ -52,7 +52,7 @@ $  ./cli sync \ -s EU \
 -a NightscoutApiSecret
 ```
 
-** Environment variables **
+**Environment variables**
 
 ```
 DEXCOM_FOLLOWER_USERNAME=DexomUsername DEXCOM_FOLLOWER_PASSWORD=DexcomPassword DEXCOM_FOLLOWER_SERVER=EU NIGHTSCOUT_INSTANCE_URL=https://my-nightscout-instance NIGHTSCOUT_API_SECRET=NightscoutApiSecret ./cli sync  
